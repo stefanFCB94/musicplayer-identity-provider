@@ -9,7 +9,7 @@ export class UserData {
   @PrimaryColumn({ length: 36, nullable: false })
   id: string;
 
-  @OneToOne(type => User, user => user.userData)
+  @OneToOne(type => User, user => user.userData, { onDelete: 'CASCADE' })
   @JoinColumn()
   user: User;
 

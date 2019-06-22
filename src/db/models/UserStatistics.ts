@@ -8,7 +8,7 @@ export class UserStatistics {
   @PrimaryColumn({ length: 36 })
   id: string;
 
-  @OneToOne(type => User, user => user.statistics)
+  @OneToOne(type => User, user => user.statistics, { onDelete: 'CASCADE' })
   @JoinColumn()
   user: User;
 

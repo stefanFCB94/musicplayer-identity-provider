@@ -1,6 +1,7 @@
-import { Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn, OneToOne } from 'typeorm';
+import { Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn, OneToOne, OneToMany } from 'typeorm';
 import { UserData } from './UserData';
 import { UserStatistics } from './UserStatistics';
+import { Token } from './Token';
 
 @Entity()
 export class User {
@@ -26,6 +27,8 @@ export class User {
   @UpdateDateColumn({ nullable: false })
   updatedAt: Date;
 
+  @OneToMany(token => Token, token => token.user)
+  tokens: Token[];
 
   @OneToOne(type => UserData, userData => userData.user)
   userData: UserData;
