@@ -2,6 +2,12 @@
 
 This services has basic functionality for user management and authentification.
 
+## Api documentation
+
+For the api documentation, please open [this repository](https://github.com/stefanFCB94/musicplayer-documentation).
+
+To view the api documentation, follow the instructions, described in the README of the references repository.
+
 
 ## Environment variables
 
