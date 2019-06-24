@@ -12,7 +12,8 @@
     "outDir": "./dist",
     "types": [
       "reflect-metadata",
-      "node"
+      "node",
+      "jest"
     ]
   },
   "include": [

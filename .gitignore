@@ -2,5 +2,6 @@ node_modules
 dist
 coverage
 config
+test_data
 data
 logs
