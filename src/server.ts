@@ -8,6 +8,7 @@ import * as fs from 'fs-extra';
 import { Logger } from '@musicplayer/logger-module';
 import { get_users } from './routes/get_users';
 import { DatabaseService } from './db/database.service';
+import { get_user } from './routes/get_user';
 
 export class Server {
 
@@ -71,6 +72,7 @@ export class Server {
   private initializeApi() {
     const router = express.Router();
     router.get('/users', get_users(this.databaseService));
+    router.get('/users/:id', get_user(this.databaseService));
 
     this.app.use('/v1', router);
   }
