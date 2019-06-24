@@ -35,10 +35,10 @@ services:
       - LOGGER_DB_PASSWORD=logger
       - LOGGER_DB_DATABASE=logger
     ports:
-      - 9000:80
-      - 9001:443
-      - 9002:8080
-      - 9003:8443
+      - 10000:80
+      - 10001:443
+      - 10002:8080
+      - 10003:8443
     depends_on:
       - "db"
 
